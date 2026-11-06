@@ -1,0 +1,439 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>A Local's Christmas in Seoul</title>
+<meta name="description" content="A Seoul local's notes for Nov–Dec 2026: Christmas hotspots, where to eat nearby, Gangnam neighborhood tips, beauty and craft experiences — with how to book and pay as a foreigner.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+<!--
+  ===================== HOW TO EDIT (한국어 안내) =====================
+  1) 내용 수정: 아래 <script> 안 CONTENT 부분만 고치면 페이지가 바뀌어요.
+     - 노란색 [ ... ] 표시는 직접 다녀온 곳으로 채울 자리예요.
+     - checked: 'YYYY-MM-DD' 를 넣으면 "Checked by Juhee" 날짜가 표시돼요.
+  2) 배지 값
+     - badges : solo, card, english, group, soft, kids, sameday
+     - book   : naver, catchtable, dm, walkin   (예약 방법)
+     - recovery: ok, later                      (시술 후 가능 여부)
+     - pay    : "How to pay here" 한 줄 설명
+  3) GA4: GA_ID 에 'G-XXXXXXX' 넣기. QR마다 ?utm_source=clinicA 처럼 붙이면 유입이 구분돼요.
+  4) 배포: 이 파일 하나를 Netlify에 올리면 끝.
+  ====================================================================
+-->
+
+<style>
+  :root{
+    --bg:#fbf7f0; --surface:#ffffff; --ink:#1e2a24; --muted:#5d6b63;
+    --green:#1f4d3a; --green-soft:#e6efe9; --red:#b8342c; --red-soft:#f8e6e3;
+    --gold:#a77d1c; --gold-soft:#f6edd6; --line:#e7dfd2; --chip:#f2ece2;
+    --shadow:0 1px 2px rgba(30,42,36,.06),0 6px 20px rgba(30,42,36,.06);
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#121815; --surface:#1a221e; --ink:#eef2ee; --muted:#a3b0a8;
+      --green:#7cc3a0; --green-soft:#1f2e27; --red:#ef8a80; --red-soft:#2e1f1d;
+      --gold:#e3bb5c; --gold-soft:#2c2617; --line:#2a3530; --chip:#232d28; --shadow:none;
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#121815; --surface:#1a221e; --ink:#eef2ee; --muted:#a3b0a8;
+    --green:#7cc3a0; --green-soft:#1f2e27; --red:#ef8a80; --red-soft:#2e1f1d;
+    --gold:#e3bb5c; --gold-soft:#2c2617; --line:#2a3530; --chip:#232d28; --shadow:none;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 Inter,system-ui,-apple-system,sans-serif;-webkit-font-smoothing:antialiased}
+  a{color:inherit}
+  .wrap{max-width:720px;margin:0 auto;padding:0 16px}
+
+  header.hero{padding:44px 0 26px;position:relative;overflow:hidden}
+  .edition{display:inline-block;font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--red);background:var(--red-soft);padding:5px 10px;border-radius:999px}
+  h1{font-family:Fraunces,Georgia,serif;font-weight:700;font-size:clamp(34px,8vw,52px);line-height:1.05;margin:14px 0 12px;letter-spacing:-.01em}
+  h1 em{font-style:normal;color:var(--green)}
+  .lede{font-size:17px;color:var(--muted);margin:0 0 16px;max-width:34em}
+  .byline{display:flex;align-items:center;gap:10px;font-size:14px;color:var(--muted)}
+  .avatar{width:34px;height:34px;border-radius:50%;background:var(--green);color:var(--bg);display:grid;place-items:center;font-weight:600;font-size:14px;flex:0 0 auto}
+  .promise{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+  .promise span{font-size:13px;background:var(--surface);border:1px solid var(--line);padding:6px 10px;border-radius:999px}
+  .snow{position:absolute;inset:0;pointer-events:none;opacity:.5}
+
+  nav.jump{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+  nav.jump .wrap{display:flex;gap:8px;overflow-x:auto;padding-top:10px;padding-bottom:10px;scrollbar-width:none}
+  nav.jump .wrap::-webkit-scrollbar{display:none}
+  nav.jump a{flex:0 0 auto;text-decoration:none;font-size:14px;font-weight:500;padding:8px 14px;border-radius:999px;background:var(--chip);white-space:nowrap}
+  nav.jump a:hover{background:var(--green-soft)}
+
+  section{padding:36px 0 8px;scroll-margin-top:60px}
+  h2{font-family:Fraunces,Georgia,serif;font-size:28px;line-height:1.15;margin:0 0 6px}
+  .sub{color:var(--muted);margin:0 0 18px}
+
+  .card{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:18px;margin-bottom:14px;box-shadow:var(--shadow)}
+  .card-top{display:flex;justify-content:space-between;align-items:flex-start;gap:10px}
+  .card h3{font-size:19px;margin:0 0 2px;line-height:1.25}
+  .meta{font-size:13px;color:var(--muted)}
+  .when{flex:0 0 auto;font-size:12px;font-weight:600;color:var(--gold);border:1px solid var(--gold);padding:3px 8px;border-radius:999px}
+  .card p{margin:10px 0 0}
+  .badges{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px}
+  .badge{font-size:12px;font-weight:500;background:var(--green-soft);color:var(--green);padding:4px 9px;border-radius:999px}
+  .badge.book{background:var(--gold-soft);color:var(--gold)}
+  .badge.rec-ok{background:var(--green-soft);color:var(--green);border:1px dashed var(--green)}
+  .badge.rec-later{background:var(--red-soft);color:var(--red)}
+  .pay{margin-top:12px;font-size:14px;border-left:3px solid var(--gold);padding:4px 0 4px 10px}
+  .pay b{display:block;font-size:12px;letter-spacing:.04em;text-transform:uppercase;color:var(--gold)}
+  .tip{margin-top:12px;font-size:14px;background:var(--chip);border-radius:12px;padding:10px 12px}
+  .tip b{color:var(--red)}
+  .checked{margin-top:10px;font-size:12px;color:var(--muted)}
+  .links{display:flex;gap:8px;margin-top:14px;flex-wrap:wrap}
+  .btn{display:inline-flex;align-items:center;gap:6px;text-decoration:none;font-size:14px;font-weight:600;padding:9px 14px;border-radius:12px;border:1px solid var(--line);background:var(--surface)}
+  .btn.primary{background:var(--green);color:var(--bg);border-color:var(--green)}
+
+  details.nearby{margin-top:14px;border-top:1px dashed var(--line);padding-top:12px}
+  details.nearby summary{cursor:pointer;font-weight:600;font-size:15px;color:var(--green);list-style:none}
+  details.nearby summary::-webkit-details-marker{display:none}
+  details.nearby summary::after{content:" ＋"}
+  details[open].nearby summary::after{content:" －"}
+  .near-item{display:grid;grid-template-columns:28px 1fr;gap:8px;padding:10px 0;border-bottom:1px solid var(--line)}
+  .near-item:last-child{border-bottom:0}
+  .near-item .ico{font-size:18px;line-height:1.4}
+  .near-item b{display:block;font-size:15px}
+  .near-item span{font-size:14px;color:var(--muted)}
+
+  .filters{display:flex;gap:8px;overflow-x:auto;margin:0 0 16px;scrollbar-width:none}
+  .filters::-webkit-scrollbar{display:none}
+  .filters button{flex:0 0 auto;font:inherit;font-size:14px;font-weight:500;padding:8px 14px;border-radius:999px;border:1px solid var(--line);background:var(--surface);color:var(--ink);cursor:pointer}
+  .filters button[aria-pressed="true"]{background:var(--green);color:var(--bg);border-color:var(--green)}
+  .rec-toggle{display:flex;align-items:center;gap:10px;font-size:14px;margin:-4px 0 16px;color:var(--muted)}
+  .rec-toggle input{width:18px;height:18px;accent-color:var(--green)}
+
+  .legend{display:grid;gap:8px;font-size:14px;color:var(--muted);margin-bottom:18px}
+  .legend div{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+
+  .todo{background:#fff3c4;color:#6b5200;border-radius:4px;padding:0 4px}
+  :root[data-theme="dark"] .todo{background:#4a3f12;color:#ffe59a}
+  @media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .todo{background:#4a3f12;color:#ffe59a}}
+
+  .tips{display:grid;grid-template-columns:1fr;gap:12px}
+  @media (min-width:560px){.tips{grid-template-columns:1fr 1fr}}
+  .tipcard{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:16px}
+  .tipcard h3{font-size:16px;margin:0 0 6px}
+  .tipcard p{margin:0;font-size:14px;color:var(--muted)}
+  .tipcard ol{margin:6px 0 0;padding-left:18px;font-size:14px;color:var(--muted)}
+
+  .about{background:var(--green);color:var(--bg);border-radius:20px;padding:22px;margin-top:8px}
+  .about h2{color:var(--bg)}
+  .about p{margin:8px 0 0;opacity:.92}
+  .about .btn{background:var(--bg);color:var(--green);border-color:var(--bg);margin-top:14px}
+  footer{padding:36px 0 48px;font-size:13px;color:var(--muted);text-align:center}
+  .empty{color:var(--muted);font-size:14px;padding:8px 0 16px}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <svg class="snow" viewBox="0 0 400 200" preserveAspectRatio="none" aria-hidden="true">
+    <g fill="var(--gold)">
+      <circle cx="30" cy="30" r="2"/><circle cx="90" cy="70" r="1.5"/><circle cx="160" cy="20" r="2"/>
+      <circle cx="240" cy="60" r="1.5"/><circle cx="310" cy="25" r="2"/><circle cx="370" cy="80" r="1.5"/>
+      <circle cx="200" cy="110" r="1.2"/><circle cx="60" cy="140" r="1.2"/><circle cx="340" cy="150" r="1.2"/>
+    </g>
+  </svg>
+  <div class="wrap">
+    <span class="edition">Nov – Dec 2026 Edition</span>
+    <h1>A Local's <em>Christmas</em> in Seoul</h1>
+    <p class="lede">A local's notes for the moments you get stuck: where to eat right after the lights, where to warm up, and what to do with a free afternoon in Gangnam.</p>
+    <div class="byline"><div class="avatar">J</div><span>By Juhee, a Gangnam local · Only places I've been to myself</span></div>
+    <div class="promise">
+      <span>✅ Checked in person</span><span>💳 How to pay, shown</span><span>📅 How to book without a Korean number</span>
+    </div>
+  </div>
+</header>
+
+<nav class="jump" aria-label="Sections">
+  <div class="wrap">
+    <a href="#hotspots" data-track="nav_hotspots">🎄 Hotspots</a>
+    <a href="#gangnam" data-track="nav_gangnam">🏨 Staying in Gangnam</a>
+    <a href="#freetime" data-track="nav_freetime">✨ Free time?</a>
+    <a href="#tips" data-track="nav_tips">🧭 Booking &amp; tips</a>
+  </div>
+</nav>
+
+<main class="wrap">
+  <section id="hotspots">
+    <h2>Christmas hotspots</h2>
+    <p class="sub">The big ones everyone goes to — plus what's within a short walk, so you can eat and warm up without the crowds.</p>
+    <div id="hotspot-list"></div>
+  </section>
+
+  <section id="gangnam">
+    <h2>Staying in Gangnam?</h2>
+    <p class="sub">Downtown hotels fill up fast in December. If you ended up in Gangnam, here's the neighborhood the way locals use it.</p>
+    <div id="gangnam-list"></div>
+  </section>
+
+  <section id="freetime">
+    <h2>Got a free afternoon?</h2>
+    <p class="sub">Too cold, rainy, or resting after a treatment? Get pampered, unwind, or make your own souvenir.</p>
+    <div class="filters" role="group" aria-label="Filter experiences">
+      <button type="button" data-cat="all" aria-pressed="true">All</button>
+      <button type="button" data-cat="beauty" aria-pressed="false">💇 Beauty</button>
+      <button type="button" data-cat="relax" aria-pressed="false">🧖 Relax</button>
+      <button type="button" data-cat="make" aria-pressed="false">🎨 Make</button>
+      <button type="button" data-cat="shop" aria-pressed="false">🛍️ Shop</button>
+    </div>
+    <label class="rec-toggle"><input type="checkbox" id="rec-only"> Just had a skin treatment? Show only what's OK right after.</label>
+    <div id="exp-list"></div>
+  </section>
+
+  <section id="tips">
+    <h2>Booking &amp; practical tips</h2>
+    <p class="sub">What the badges mean, and the small things that save you time on day one.</p>
+    <div class="legend" id="legend"></div>
+    <div class="tips" id="tip-list"></div>
+  </section>
+
+  <section>
+    <div class="about">
+      <h2>Hi, I'm Juhee 👋</h2>
+      <p>I live between Sinnonhyeon and Nonhyeon stations. The best places in my neighborhood never show up when you search in English — so I wrote them down. Found something useful, or something out of date? Tell me.</p>
+      <a class="btn" id="feedback-link" href="#" data-track="feedback">Send feedback ✉️</a>
+      <a class="btn" id="insta-link" href="#" data-track="instagram">Instagram</a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">Independent local guide · Not sponsored · No medical recommendations · Event dates may change — please confirm before you go.</div>
+</footer>
+
+<script>
+/* ============================ SETTINGS ============================ */
+const GA_ID = '';            // 예: 'G-ABC123XYZ'
+const FEEDBACK_URL = '';     // 예: 구글폼 링크 또는 'mailto:you@email.com'
+const INSTAGRAM_URL = '';    // 인스타 계정 링크
+
+/* ============================ CONTENT ============================= */
+const HOTSPOTS = [
+  {
+    name: "Cheonggyecheon Christmas Festival", area: "Jongno · Gwanghwamun", when: "Dates TBC",
+    desc: "Light tunnels and festive stalls along the stream. Best right after sunset.",
+    tip: "Start at the downstream end and walk upstream — the crowd thins out.",
+    map: "Cheonggyecheon Seoul",
+    nearby: [
+      { type:"eat",   name:"[Your pick]", note:"Hot soup, no line, seats for 4+" },
+      { type:"warm",  name:"[Your pick]", note:"Big café to warm up, card OK" },
+      { type:"quiet", name:"[Your pick]", note:"Less crowded subway exit" }
+    ]
+  },
+  {
+    name: "Gwanghwamun Christmas Market", area: "Gwanghwamun Square", when: "Dates TBC",
+    desc: "European-style market stalls in front of the palace gate.",
+    tip: "Weekday evenings are far calmer than weekends.",
+    map: "Gwanghwamun Square Seoul",
+    nearby: [
+      { type:"eat",  name:"[Your pick]", note:"Korean comfort food near the square" },
+      { type:"warm", name:"[Your pick]", note:"Tea house in a quiet alley" }
+    ]
+  },
+  {
+    name: "Myeongdong Department Store Facade", area: "Myeongdong", when: "Dates TBC",
+    desc: "The giant media facade show everyone films for Reels.",
+    tip: "Watch from across the street for the full view.",
+    map: "Shinsegae Department Store Myeongdong",
+    nearby: [
+      { type:"eat",   name:"[Your pick]", note:"Street-food alternative with seats" },
+      { type:"quiet", name:"[Your pick]", note:"Back street to skip the main crowd" }
+    ]
+  },
+  {
+    name: "Lotte World Tower & Jamsil", area: "Jamsil", when: "Dates TBC",
+    desc: "Christmas market by the lake and the year-end countdown at the tower.",
+    tip: "Great with kids — plenty of indoor backup if it's freezing.",
+    map: "Lotte World Tower Seoul",
+    nearby: [
+      { type:"eat",  name:"[Your pick]", note:"Family-friendly, group tables" },
+      { type:"warm", name:"[Your pick]", note:"Dessert café (Dec = strawberry season)" }
+    ]
+  }
+];
+
+const GANGNAM = [
+  { title:"[Your pick] — group dinner", area:"Sinnonhyeon · 3 min walk",
+    desc:"Korean BBQ that seats 6–8 together. Order the set menu; they'll grill for you.",
+    badges:["group","english"], book:["naver","walkin"], pay:"Foreign Visa/Master OK",
+    tip:"Busy 7–8pm. Book on Naver with your passport, or come before 6:30.", map:"Sinnonhyeon Station", checked:"" },
+  { title:"[Your pick] — soft & gentle food", area:"Nonhyeon · 5 min walk",
+    desc:"Porridge and mild soups. Easy on the face if you're recovering from a treatment.",
+    badges:["solo","soft"], book:["walkin"], recovery:"ok", pay:"Foreign card OK · kiosk has English",
+    tip:"Point at the photo menu — staff are used to it.", map:"Nonhyeon Station", checked:"" },
+  { title:"[Your pick] — quiet café", area:"Between the two stations",
+    desc:"Calm, roomy, good for resting with a mask on. Outlets at most seats.",
+    badges:["solo"], book:["walkin"], recovery:"ok", pay:"Foreign card OK",
+    tip:"", map:"Sinnonhyeon Station cafe", checked:"" },
+  { title:"Pharmacy & convenience store", area:"Around Sinnonhyeon Station",
+    desc:"Pharmacies usually close in the evening; convenience stores are open 24h.",
+    badges:[], book:["walkin"], pay:"Foreign card OK at most",
+    tip:"Look for the green cross sign: 약국 (yak-guk).", map:"pharmacy Sinnonhyeon", checked:"" }
+];
+
+/* cat: beauty | relax | make | shop */
+const EXPERIENCES = [
+  { cat:"beauty", title:"Hair salon: cut, perm or color", area:"[Salon name] · Gangnam",
+    desc:"Korean stylists are known for soft layers and natural perms. The most-booked beauty treat for visitors from Singapore and the US.",
+    meta:"⏱ 1.5–3 hrs", badges:["english"], book:["naver","dm"], recovery:"ok",
+    pay:"Foreign card OK · deposit may be needed when booking", tip:"Bring a photo of the look you want.", map:"", checked:"" },
+  { cat:"beauty", title:"Head spa", area:"[Shop name] · Gangnam",
+    desc:"Scalp care plus a long, quiet head massage. Pure relaxation, no downtime.",
+    meta:"⏱ 60–90 min", badges:["solo"], book:["naver","catchtable"], recovery:"ok",
+    pay:"Foreign card OK", tip:"Scalp only — fine even after most face treatments.", map:"", checked:"" },
+  { cat:"beauty", title:"Personal color analysis", area:"[Studio name]",
+    desc:"Find the colors that suit you, then shop K-beauty with a cheat sheet.",
+    meta:"⏱ 1–2 hrs", badges:["english","solo"], book:["naver","dm"], recovery:"ok",
+    pay:"Foreign card OK", tip:"Go bare-faced, or bring makeup remover.", map:"", checked:"" },
+  { cat:"beauty", title:"Christmas nails", area:"[Shop name] · Gangnam",
+    desc:"Seasonal designs, done in about an hour. Perfect for holiday photos.",
+    meta:"⏱ 60–90 min", badges:["solo","sameday"], book:["naver","walkin"], recovery:"ok",
+    pay:"Foreign card OK", tip:"", map:"", checked:"" },
+  { cat:"beauty", title:"Makeup + photo studio", area:"[Studio name]",
+    desc:"Get your makeup done, then a profile photo shoot. A souvenir of the new you.",
+    meta:"⏱ 2–3 hrs", badges:["english"], book:["naver","dm"], recovery:"later",
+    pay:"Foreign card OK", tip:"After a skin treatment, wait until redness settles.", map:"", checked:"" },
+  { cat:"relax", title:"Spa & massage", area:"[Spa name] · Gangnam",
+    desc:"Warm up and unwind after a cold day out.",
+    meta:"⏱ 60–120 min", badges:["solo"], book:["naver","catchtable"], recovery:"later",
+    pay:"Foreign card OK", tip:"Tell them about any recent treatment before you start.", map:"", checked:"" },
+  { cat:"relax", title:"Jjimjilbang (Korean sauna)", area:"[Place name]",
+    desc:"Heated rooms, hot baths and snacks — straight out of K-dramas.",
+    meta:"⏱ 2+ hrs", badges:["solo","group","kids"], book:["walkin"], recovery:"later",
+    pay:"Foreign card usually OK at the counter", tip:"Skip heat and scrubs for a few days after skin treatments.", map:"", checked:"" },
+  { cat:"make", title:"Resin Christmas ornament", area:"[Studio name] · Gangnam",
+    desc:"Make a glittering ornament to hang on your tree back home.",
+    meta:"⏱ 90 min · 🎁 take it home", badges:["solo","sameday"], book:["dm"], recovery:"ok",
+    pay:"[Confirm: card or cash]", tip:"Tell them you're a traveler — they'll speed up the curing.", map:"", checked:"" },
+  { cat:"make", title:"Painting studio drop-in", area:"[Studio name] · Gangnam",
+    desc:"Paint a small canvas of a Seoul winter scene. No experience needed.",
+    meta:"⏱ 2 hrs · 🎨 materials included", badges:["solo","english"], book:["dm"], recovery:"ok",
+    pay:"[Confirm: card or cash]", tip:"Gentlest option if your skin is sensitive.", map:"", checked:"" },
+  { cat:"make", title:"String craft (sil-tteugi)", area:"[Studio name]",
+    desc:"A calm, hands-on craft — perfect for a rainy afternoon.",
+    meta:"⏱ 60–90 min", badges:["solo","sameday","kids"], book:["dm"], recovery:"ok",
+    pay:"[Confirm: card or cash]", tip:"", map:"", checked:"" },
+  { cat:"shop", title:"K-fashion street shopping", area:"[Area name]",
+    desc:"Local brands and Seoul-only items, not just the duty-free names.",
+    meta:"⏱ as long as you like", badges:["solo"], book:["walkin"], recovery:"ok",
+    pay:"Foreign card OK · ask about tax refund", tip:"Bring your passport for instant tax refund.", map:"", checked:"" },
+  { cat:"shop", title:"Gacha shops, stationery & bookstores", area:"[Area name]",
+    desc:"Capsule toys, cute stationery and design books — small, light souvenirs.",
+    meta:"⏱ 1 hr", badges:["solo","kids"], book:["walkin"], recovery:"ok",
+    pay:"Gacha machines may need coins or cash", tip:"", map:"", checked:"" }
+];
+
+const TIPS = [
+  { h:"📅 Booking without a Korean number", list:[
+      "Naver Map: since June 2026 you can verify with your passport to book and pay — no Korean phone needed.",
+      "CatchTable Global: sign up with email, pay with a foreign card, join waitlists remotely.",
+      "Small studios often take bookings by Instagram DM."
+  ]},
+  { h:"💳 Paying", p:"Foreign cards work in most places. Seoul subway ticket machines take foreign cards too — but carry a little cash for small shops, gacha machines and other cities." },
+  { h:"🗺️ Maps", p:"Download Naver Map (English mode) before you arrive. It's far better than Google Maps for walking and transit in Korea." },
+  { h:"🥶 Cold", p:"December nights can drop below -10°C. Layer up: thermal top + fleece + windproof coat. Hand warmers are sold at convenience stores." },
+  { h:"📞 Help in English", p:"Dial 1330, the Korea Travel Hotline — 24/7 in English and other languages. Emergency: 119 (fire/ambulance), 112 (police)." },
+  { h:"🎄 Christmas Day", p:"Dec 25 is a public holiday. Shops and restaurants are open but packed — book dinner ahead." },
+  { h:"🏨 Sold-out downtown?", p:"Gangnam and Jamsil are about 20–30 min by subway from the main Christmas spots, and often have rooms left." }
+];
+
+/* =========================== RENDERING ============================ */
+const BADGE = { solo:"👤 Solo OK", card:"💳 Foreign card OK", english:"🗣️ English OK", sameday:"📅 Same-day OK", group:"👥 Group tables", soft:"🥣 Soft food", kids:"🧒 Kid-friendly" };
+const BOOK  = { naver:"Naver (passport OK)", catchtable:"CatchTable Global", dm:"Instagram DM", walkin:"Walk-in" };
+const REC   = { ok:["rec-ok","🩹 OK after treatment"], later:["rec-later","⏳ Wait a few days after treatment"] };
+const ICON  = { eat:"🍜", warm:"☕", quiet:"🚶", shop:"🛍️" };
+const esc  = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const mark = s => esc(s).replace(/\[(.+?)\]/g, '<span class="todo">[$1]</span>');
+const gmap = q => `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(q)}`;
+const nmap = q => `https://map.naver.com/p/search/${encodeURIComponent(q)}`;
+
+const badgeRow = c => {
+  const out = [];
+  (c.badges||[]).forEach(b => out.push(`<span class="badge">${BADGE[b]||esc(b)}</span>`));
+  (c.book||[]).forEach(b => out.push(`<span class="badge book">📅 ${BOOK[b]||esc(b)}</span>`));
+  if (c.recovery && REC[c.recovery]) out.push(`<span class="badge ${REC[c.recovery][0]}">${REC[c.recovery][1]}</span>`);
+  return out.length ? `<div class="badges">${out.join('')}</div>` : '';
+};
+const pay  = p => p ? `<div class="pay"><b>How to pay here</b>${mark(p)}</div>` : '';
+const tip  = t => t ? `<div class="tip"><b>Local tip</b> · ${mark(t)}</div>` : '';
+const chk  = d => d ? `<div class="checked">✅ Checked by Juhee · ${esc(d)}</div>` : '';
+const maps = (q, id) => q ? `<div class="links">
+  <a class="btn primary" href="${nmap(q)}" target="_blank" rel="noopener" data-track="naver_map" data-item="${esc(id)}">Naver Map</a>
+  <a class="btn" href="${gmap(q)}" target="_blank" rel="noopener" data-track="google_map" data-item="${esc(id)}">Google Maps</a></div>` : '';
+
+document.getElementById('hotspot-list').innerHTML = HOTSPOTS.map(h => `
+  <article class="card">
+    <div class="card-top"><div><h3>${mark(h.name)}</h3><div class="meta">${mark(h.area)}</div></div><span class="when">${esc(h.when)}</span></div>
+    <p>${mark(h.desc)}</p>
+    ${tip(h.tip)}
+    ${maps(h.map, h.name)}
+    <details class="nearby" data-item="${esc(h.name)}">
+      <summary>Within a short walk</summary>
+      ${h.nearby.map(n => `<div class="near-item"><div class="ico">${ICON[n.type]||'📍'}</div><div><b>${mark(n.name)}</b><span>${mark(n.note)}</span></div></div>`).join('')}
+    </details>
+  </article>`).join('');
+
+const card = c => `
+  <article class="card">
+    <h3>${mark(c.title)}</h3>
+    <div class="meta">${mark(c.area)}${c.meta ? ' · ' + mark(c.meta) : ''}</div>
+    <p>${mark(c.desc)}</p>
+    ${badgeRow(c)}
+    ${pay(c.pay)}
+    ${tip(c.tip)}
+    ${chk(c.checked)}
+    ${maps(c.map, c.title)}
+  </article>`;
+document.getElementById('gangnam-list').innerHTML = GANGNAM.map(card).join('');
+
+let currentCat = 'all';
+const recOnly = document.getElementById('rec-only');
+const renderExp = () => {
+  const list = EXPERIENCES.filter(e => (currentCat === 'all' || e.cat === currentCat) && (!recOnly.checked || e.recovery === 'ok'));
+  document.getElementById('exp-list').innerHTML = list.length ? list.map(card).join('') : '<p class="empty">Nothing here yet — try another filter.</p>';
+};
+document.querySelectorAll('.filters button').forEach(btn => btn.addEventListener('click', () => {
+  currentCat = btn.dataset.cat;
+  document.querySelectorAll('.filters button').forEach(b => b.setAttribute('aria-pressed', String(b === btn)));
+  renderExp(); track('filter_category', { item: currentCat });
+}));
+recOnly.addEventListener('change', () => { renderExp(); track('filter_recovery', { item: String(recOnly.checked) }); });
+renderExp();
+
+document.getElementById('legend').innerHTML = `
+  <div><span class="badge book">📅 Naver (passport OK)</span><span class="badge book">📅 CatchTable Global</span><span class="badge book">📅 Instagram DM</span><span class="badge book">📅 Walk-in</span> How to book</div>
+  <div><span class="badge rec-ok">🩹 OK after treatment</span><span class="badge rec-later">⏳ Wait a few days</span> If you've had a skin treatment</div>
+  <div><span class="badge">👤 Solo OK</span><span class="badge">🗣️ English OK</span> Checked in person</div>`;
+
+document.getElementById('tip-list').innerHTML = TIPS.map(t => `<div class="tipcard"><h3>${esc(t.h)}</h3>${t.list ? `<ol>${t.list.map(i=>`<li>${esc(i)}</li>`).join('')}</ol>` : `<p>${esc(t.p)}</p>`}</div>`).join('');
+
+const fb = document.getElementById('feedback-link'); if (FEEDBACK_URL) fb.href = FEEDBACK_URL; else fb.style.display = 'none';
+const ig = document.getElementById('insta-link'); if (INSTAGRAM_URL) ig.href = INSTAGRAM_URL; else ig.style.display = 'none';
+
+/* ============================ ANALYTICS =========================== */
+function track(name, params){ if (window.gtag) gtag('event', name, params || {}); }
+if (GA_ID) {
+  const s = document.createElement('script');
+  s.async = true; s.src = `https://www.googletagmanager.com/gtag/js?id=${GA_ID}`;
+  document.head.appendChild(s);
+  window.dataLayer = window.dataLayer || [];
+  window.gtag = function(){ dataLayer.push(arguments); };
+  gtag('js', new Date()); gtag('config', GA_ID);
+}
+document.addEventListener('click', e => {
+  const el = e.target.closest('[data-track]');
+  if (el) track(el.dataset.track, { item: el.dataset.item || '' });
+});
+document.querySelectorAll('details.nearby').forEach(d =>
+  d.addEventListener('toggle', () => { if (d.open) track('open_nearby', { item: d.dataset.item }); })
+);
+</script>
+</body>
+</html>
